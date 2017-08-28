@@ -8,6 +8,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server --https --hot --output-public-path https://localhost:25787/assets/dist",
     "lint": "eslint --ext js,vue src",
     "release": "node scripts/release.js",
+    "test": "karma start karma.conf.js",
     "webpack-stats": "cross-env NODE_ENV=production webpack --json > stats.json"
   },
   "dependencies": {
@@ -53,13 +54,19 @@
     "fs-extra": "4.0.1",
     "glob": "7.1.2",
     "imports-loader": "0.7.1",
+    "jasmine-core": "2.8.0",
     "json-loader": "0.5.4",
+    "karma": "1.7.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-jasmine": "1.1.0",
+    "karma-webpack": "2.0.4",
     "node-sass": "4.5.3",
     "ora": "1.3.0",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
     "vue-loader": "12.2.2",
     "vue-template-compiler": "2.4.2",
+    "vue-unit": "0.2.2",
     "webpack": "3.3.0",
     "webpack-dev-server": "2.5.1",
     "yaml-loader": "0.5.0"

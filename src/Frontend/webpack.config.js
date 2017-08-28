@@ -24,10 +24,6 @@ module.exports = {
         filename: process.env.NODE_ENV === 'production' ? '[name].[chunkhash].js' : '[name].js'
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-            filename: process.env.NODE_ENV === 'production' ? '[name].[chunkhash].js' : '[name].js',
-            name: "commons"
-        }),
         new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, new RegExp(availableTranslations.join('|'))),
     ],
     module: {
