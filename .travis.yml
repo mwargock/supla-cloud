@@ -1,6 +1,8 @@
 language: php
 php:
   - '7.0.28'
+addons:
+  chrome: stable
 before_install:
   - nvm install 8
 before_script:
@@ -12,7 +14,7 @@ before_script:
 script:
   - composer run-script lint
   - php bin/console server:start -e dev
-  - curl localhost:8000
+  - cd src/Frontend && npm prune && npm install && npm run e2e && cd ../..
   - php bin/console server:stop -e dev
 notifications:
   slack:
