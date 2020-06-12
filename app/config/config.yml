@@ -150,7 +150,7 @@ supla:
   accounts_registration_enabled: true
   autodiscover_url: https://autodiscover.supla.org
   api_rate_limit:
-    enabled: true
+    enabled: false
     blocking: false
     user_default_limit: 1000/3600
     global_limit: 320/60
